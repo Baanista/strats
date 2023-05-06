@@ -10,6 +10,7 @@ python -m arcade.examples.starting_template
 import arcade
 from fcalvary import *
 import test
+from nural_net import *
 
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
@@ -39,7 +40,7 @@ class MyGame(arcade.Window):
     def setup(self):
         """ Set up the game variables. Call to re-start the game. """
         # Create your sprites and sprite lists here
-        self.test = calvary_U(100, 100)
+        self.test = calvary_U(100, 100, Brain([2+1+2+1+8, 5, 8+1+1]))
 
         self.test.rotation = 0
 
@@ -66,6 +67,7 @@ class MyGame(arcade.Window):
         Normally, you'll call update() on the sprite lists that
         need it.
         """
+
         print("pos", self.test.x, self.test.x)
         self.test.update()
 
